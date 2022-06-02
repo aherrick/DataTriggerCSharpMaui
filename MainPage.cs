@@ -30,9 +30,9 @@ namespace DataTriggerCSharpMaui
         }
     }
 
-    public class MainPageCS : ContentPage
+    public class MainPage : ContentPage
     {
-        public MainPageCS()
+        public MainPage()
         {
             var venueSuccessCV = new VenueSuccessContentView();
             Resources.Add(nameof(LayoutState.Success), venueSuccessCV);
