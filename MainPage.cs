@@ -38,14 +38,11 @@ namespace DataTriggerCSharpMaui
             Resources.Add(nameof(LayoutState.Success), venueSuccessCV);
 
             var cvWrap = new ContentView();
-            var cv = new ContentView();
-            cvWrap.Content = cv;
-
             Content = cvWrap;
 
             var datatrigger = new DataTrigger(typeof(ContentView))
             {
-                Binding = new Binding(source: RelativeBindingSource.TemplatedParent, path: nameof(VenuePageViewModel.LayoutState)),
+                Binding = new Binding(path: nameof(VenuePageViewModel.LayoutState)),
                 Value = LayoutState.Success,
                 Setters = {
                 new Setter { Property =  ContentView.ContentProperty, Value = venueSuccessCV },
